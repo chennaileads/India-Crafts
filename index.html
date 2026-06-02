@@ -36,6 +36,37 @@
 	<link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 <style>
+    .about-contact-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.about-contact-content{
+    flex:1;
+}
+
+.about-us-content-btn{
+    margin-left:auto;
+}
+
+.about-us-content-btn .btn-default{
+    white-space:nowrap;
+}
+
+@media (max-width: 767px){
+    .about-contact-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .about-us-content-btn{
+        margin-left:0;
+        margin-top:15px;
+    }
+}
     .client-category-box{
     background:#fff;
     padding:35px;
@@ -186,7 +217,7 @@
                                         <li class="nav-item"><a class="nav-link" href="modular.html">Modular Kitchen Interior Design</a></li>
                                         <li class="nav-item"><a class="nav-link" href="wardrobes.html">Wardrobes Interior Design</a></li>
                                         <li class="nav-item"><a class="nav-link" href="accesories.html">Accessories Interior Design</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="architect.html">Architect</a></li>
+                                        <!-- <li class="nav-item"><a class="nav-link" href="architect.html">Architect</a></li> -->
                                     </ul>
                                 </li>
                                
@@ -393,22 +424,29 @@
 
                         </div>
 
-                        <!-- Contact Info -->
-                        <div class="about-us-contact-list">
-                            <div class="about-contact-item wow fadeInUp" data-wow-delay="0.4s">
+                   <!-- Contact Info -->
+<div class="about-us-contact-list">
+    <div class="about-contact-item wow fadeInUp" data-wow-delay="0.4s">
 
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
+        <div class="icon-box">
+            <i class="fa-solid fa-phone"></i>
+        </div>
 
-                                <div class="about-contact-content">
-                                    <p>need any help?</p>
-                                    <h3>+91 6369906164</h3>
-                                </div>
+        <div class="about-contact-content">
+            <p>Need Any Help?</p>
+            <h3><a href="tel:+916369906164">+91 6369906164</a></h3>
+        </div>
 
-                            </div>
-                        </div>
+        <div class="about-us-content-btn">
+            <a href="images/INDIA CRAFTS - Design Proposal-1.pdf"
+               target="_blank"
+               class="btn-default">
+                Design Proposal
+            </a>
+        </div>
 
+    </div>
+</div>
                     </div>
                 </div>
                 <!-- About Us Content End -->
@@ -583,7 +621,7 @@
                     <div class="post-featured-image">
                         <figure>
                             <a href="gallery.html" class="image-anime" data-cursor-text="View">
-                                <img src="images/resident1.png" alt="Modern Kitchen Design">
+                                <img src="images/gallery8.jpeg" alt="Modern Kitchen Design">
                             </a>
                         </figure>
                     </div>
@@ -596,7 +634,7 @@
                     <div class="post-featured-image">
                         <figure>
                             <a href="gallery.html" class="image-anime" data-cursor-text="View">
-                                <img src="images/office1.jpeg" alt="Luxury Wardrobe Interior">
+                                <img src="images/gallery9.jpeg" alt="Luxury Wardrobe Interior">
                             </a>
                         </figure>
                     </div>
@@ -609,7 +647,7 @@
                     <div class="post-featured-image">
                         <figure>
                             <a href="gallery.html" class="image-anime" data-cursor-text="View">
-                                <img src="images/acce1.jpg" alt="Custom Storage Solutions">
+                                <img src="images/gallery10.jpeg" alt="Custom Storage Solutions">
                             </a>
                         </figure>
                     </div>
@@ -1010,7 +1048,7 @@
     </div>
 </div>
 <!-- Our Testimonial End -->
-    <!-- Footer Start -->
+       <!-- Footer Start -->
     <footer class="main-footer">
         <div class="container">
             <div class="row">
@@ -1055,7 +1093,7 @@
                      <div class="footer-links">
                         <h3>Interior Services</h3>
                         <ul>
-                            <li><a href="architect.html">Architects</a></li>
+                            <!-- <li><a href="architect.html">Architects</a></li> -->
                             <li><a href="office.html">Office Interior Design</a></li>
                             <li><a href="corporate.html">Corporate Interior Design</a></li>
   <li><a href="residential.html">Commercial & Residential Interior Design</a></li>
@@ -1077,7 +1115,6 @@
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div class="footer-contact-content">
-                               <p>044 - 4790 9922</p>
                                 <p>+91 6369906164</p>
                                 <p>+91 9600955245</p>
                             </div>
