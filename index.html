@@ -36,6 +36,138 @@
 	<link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 <style>
+    /* Note Box */
+.client-scope-note{
+    background:#f8f9fa;
+    border-left:4px solid #c89b6d;
+    padding:18px 25px;
+    margin:30px 0 40px;
+    border-radius:10px;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.client-gallery{
+    margin:50px 0;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.gallery-item::after{
+    content:"\f00e";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:60px;
+    height:60px;
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    opacity:0;
+    transition:0.3s;
+    pointer-events:none;
+}
+
+.gallery-item:hover::after{
+    opacity:1;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:all 0.4s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-large{
+    height:320px;
+}
+
+@media (max-width: 991px){
+    .gallery-item,
+    .gallery-large{
+        height:250px;
+    }
+}
+
+@media (max-width: 767px){
+    .gallery-item,
+    .gallery-large{
+        height:220px;
+    }
+}
+
+/* Project Boxes */
+.client-category-box{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    height:100%;
+    transition:0.3s ease;
+}
+
+.client-category-box:hover{
+    transform:translateY(-5px);
+}
+
+.client-category-box h3{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.client-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.client-list li{
+    padding:14px 0;
+    border-bottom:1px solid #ececec;
+    font-size:17px;
+    font-weight:500;
+}
+
+.client-list li:last-child{
+    border-bottom:none;
+}
+
+/* Mobile */
+@media (max-width: 767px){
+
+    .gallery-item{
+        height:180px;
+    }
+
+    .gallery-large{
+        height:250px;
+    }
+
+    .client-category-box{
+        padding:25px;
+    }
+
+    .client-category-box h3{
+        font-size:24px;
+    }
+}
     .about-contact-item{
     display:flex;
     align-items:center;
@@ -761,69 +893,117 @@
   
 
 <!-- Our Clients / Project Scope Start -->
-
 <div class="our-clients" style="margin-top: 70px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="our-clients-box">
 
-                <!-- Section Title Start -->
-                <div class="section-title text-center">
-                    <h3 class="wow fadeInUp">Our Clients</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">
-                        Delivering Excellence Across Commercial & Residential Projects
-                    </h2>
-                    <p class="wow fadeInUp" data-wow-delay="0.2s">
-                        Our expertise spans a wide range of commercial and residential projects, delivering quality workmanship, innovative solutions, and reliable execution. We have successfully contributed to projects associated with leading organizations, institutions, and residential developments.
-                    </p>
-                </div>
-                <!-- Section Title End -->
-
-                <!-- Note Start -->
-                <div class="client-scope-note wow fadeInUp" data-wow-delay="0.3s">
-                    <strong>Note:</strong> The following names represent projects, developments, institutions, or organizations where our scope of work has been executed. These are showcased as part of our project experience and portfolio.
-                </div>
-                <!-- Note End -->
-
-                <div class="row g-4 mt-4">
-
-                    <!-- Commercial Projects -->
-                    <div class="col-lg-6">
-                        <div class="client-category-box wow fadeInUp">
-                            <h3>Commercial Projects</h3>
-                            <ul class="client-list">
-                                <li>MRF</li>
-                                <li>IIT</li>
-                                <li>Larsen & Toubro (L&T)</li>
-                            </ul>
-                        </div>
+                    <!-- Section Title Start -->
+                    <div class="section-title text-center">
+                        <h3 class="wow fadeInUp">Our Clients</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">
+                            Delivering Excellence Across Commercial & Residential Projects
+                        </h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">
+                            Our expertise spans a wide range of commercial and residential projects, delivering quality workmanship, innovative solutions, and reliable execution. We have successfully contributed to projects associated with leading organizations, institutions, and residential developments.
+                        </p>
                     </div>
+                    <!-- Section Title End -->
 
-                    <!-- Residential Projects -->
-                    <div class="col-lg-6">
-                        <div class="client-category-box wow fadeInUp" data-wow-delay="0.2s">
-                            <h3>Residential Projects</h3>
-                            <ul class="client-list">
-                                <li>Casagrand</li>
-                                <li>Appaswamy Real Estates</li>
-                                <li>Keeranatham</li>
-                                <li>ZebraLearn</li>
-                                <li>Urban Tree</li>
-                                <li>True Value Homes (TVH)</li>
-                                <li>VGN</li>
-                            </ul>
-                        </div>
+                    <!-- Note Start -->
+                    <div class="client-scope-note wow fadeInUp" data-wow-delay="0.3s">
+                        <strong>Note:</strong> The following names represent projects, developments, institutions, or organizations where our scope of work has been executed. These are showcased as part of our project experience and portfolio.
                     </div>
+                    <!-- Note End -->
 
-                </div>
+              <div class="client-gallery wow fadeInUp" data-wow-delay="0.4s">
 
+    <!-- First Row -->
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <div class="gallery-item">
+                <a href="images/2400328064 - INDIA KRAFT_page-0001.jpg" target="_blank">
+                    <img src="images/2400328064 - INDIA KRAFT_page-0001.jpg" alt="Project Image 1">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <div class="gallery-item">
+                <a href="images/2400328064 - INDIA KRAFT_page-0002.jpg" target="_blank">
+                    <img src="images/2400328064 - INDIA KRAFT_page-0002.jpg" alt="Project Image 2">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mb-4">
+            <div class="gallery-item">
+                <a href="images/PO-RTI001 RAYTECH INDIA 27042026_page-0001.jpg" target="_blank">
+                    <img src="images/PO-RTI001 RAYTECH INDIA 27042026_page-0001.jpg" alt="Project Image 3">
+                </a>
             </div>
         </div>
     </div>
+
+    <!-- Second Row -->
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 mb-4">
+            <div class="gallery-item gallery-large">
+                <a href="images/wall - 2- new.jpg.jpeg" target="_blank">
+                    <img src="images/wall - 2- new.jpg.jpeg" alt="Project Image 4">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12 mb-4">
+            <div class="gallery-item gallery-large">
+                <a href="images/wall-1.JPG.jpeg" target="_blank">
+                    <img src="images/wall-1.JPG.jpeg" alt="Project Image 5">
+                </a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
+                    <div class="row g-4 mt-5">
 
+                        <!-- Commercial Projects -->
+                        <div class="col-lg-6">
+                            <div class="client-category-box wow fadeInUp">
+                                <h3>Commercial Projects</h3>
+                                <ul class="client-list">
+                                    <li>MRF</li>
+                                    <li>IIT</li>
+                                    <li>Larsen & Toubro (L&T)</li>
+                                    <li>Ray Tech</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Residential Projects -->
+                        <div class="col-lg-6">
+                            <div class="client-category-box wow fadeInUp" data-wow-delay="0.2s">
+                                <h3>Residential Projects</h3>
+                                <ul class="client-list">
+                                    <li>Casagrand</li>
+                                    <li>Appaswamy Real Estates</li>
+                                    <li>Keeranatham</li>
+                                    <li>ZebraLearn</li>
+                                    <li>Urban Tree</li>
+                                    <li>True Value Homes (TVH)</li>
+                                    <li>VGN</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Our Clients / Project Scope End -->
 
